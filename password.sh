@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# while true; do
+while true; do
 	echo "length of new password:"
 	
 	read length
@@ -10,9 +10,9 @@
 		if [ "$length" -lt 12 ] || [ "$length" -gt 20 ]; then
 			echo "length must be between 12 and 20 characters"
 		else
-			echo "valid length - continuing"
+			break
 		fi
 	else
 		echo "invalid input"
 	fi
-# done
+done
