@@ -17,5 +17,5 @@ while true; do
 done
 
 # generate string using CSPRNG
-password=$(head -c "$length" /dev/urandom | base64)
+password=$(head -c "$length" /dev/urandom | base64 | head -c "$length")
 echo "new password: $password"
